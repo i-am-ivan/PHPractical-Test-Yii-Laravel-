@@ -9,6 +9,8 @@ function populate_array($record){
     for($r = 0; $r < $record; $r++){
         $my_array[] = "Record_" . ($r + 1);
     }
+    # Return array after populating
+    return $my_array;
 }
 
 # function to iterate through each array then print their index and value
@@ -29,4 +31,4 @@ function print_array($array) {
 
 # print to console
 $my_array = populate_array(20); # Populate the array with 20 records
-print($my_array); # Display array records to console
+print_array($my_array); # Display array records to console
