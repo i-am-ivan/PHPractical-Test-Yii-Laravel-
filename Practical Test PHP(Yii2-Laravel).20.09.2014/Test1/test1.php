@@ -21,7 +21,7 @@ function print_array($array) {
     foreach($my_batches as $my_batch){
         foreach ($my_batch as $record_index => $record_value){
             # Print to screen the index and records value side by side
-            echo "\n Index: $record_index, Value: $record_value";
+            echo "\n Index: $record_index, Record Value: $record_value";
         }
         echo "\n --------------------------------------------------------------- \n ";
     }
