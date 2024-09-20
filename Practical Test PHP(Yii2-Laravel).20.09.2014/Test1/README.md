@@ -10,5 +10,5 @@ NOTE: This is my thinking since I had limited time for a more complex algo.
 
 ## Expected Output
 
-
+![Test1 Output](Assets/Images/PHPracticalTest.Test1.Output.png)
 

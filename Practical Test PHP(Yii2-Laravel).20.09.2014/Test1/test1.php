@@ -25,7 +25,7 @@ function print_array($array) {
             # Print to screen the index and records value side by side
             echo "\n Index: $record_index, Record Value: $record_value";
         }
-        echo "\n --------------------------------------------------------------- \n ";
+        echo "\n --------------------------------------------------------------- \n "; # Separate the batches by 5
     }
 }
 
