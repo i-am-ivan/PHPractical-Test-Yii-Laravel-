@@ -1,0 +1,268 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height to accommodate sticky top nav */
+}
+
+/* Top Navigation Bar */
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007BFF; /* Blue background */
+    padding: 10px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.app-title {
+    margin: 0;
+    font-size: 24px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info span {
+    margin-right: 20px;
+}
+
+/* Logout link */
+.logout {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+}
+
+.logout:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slight white background on hover */
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #007BFF; /* Blue background */
+    width: 200px;
+    height: calc(100vh - 50px); /* Full height minus top nav */
+    color: white;
+    position: fixed;
+    top: 50px; /* Directly below the sticky top nav */
+    left: 0; /* Align to the left */
+}
+
+/* Sidebar Heading */
+.sidebar h3 {
+    margin-bottom: 15px;
+}
+
+/* Sidebar Links */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0; /* No padding */
+    margin: 0; /* No margin */
+}
+
+.sidebar ul li {
+    margin: 0; /* No margin */
+}
+
+.sidebar ul li a {
+    color: white; /* Link color */
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block; /* Full width clickable area */
+}
+
+.sidebar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Background on hover */
+}
+
+/* Active link color */
+.sidebar ul li a.active {
+    background-color: rgba(255, 255, 255, 0.3); /* Active link color */
+    color: white; /* Active link text color */
+}
+
+/* Content Area */
+.content {
+    margin-left: 220px; /* Space for the sidebar */
+    padding: 20px;
+    flex-grow: 1;
+    height: calc(100vh - 50px); /* Adjust for sticky top nav */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Space between cards */
+    margin-bottom: 20px;
+}
+
+/* Card styles */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: calc(30% - 20px); /* Adjust for spacing */
+    margin: 10px; /* Space around each card */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    padding: 16px;
+    text-align: center; /* Center text in card */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .card {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .content {
+        margin-left: 0; /* No sidebar margin on small screens */
+    }
+
+    .sidebar {
+        width: 100%; /* Full width on small screens */
+        height: auto; /* Adjust height */
+        position: relative; /* Position change for smaller screens */
+    }
+
+    .dashboard-container {
+        flex-direction: column; /* Stack layout */
+    }
+}
+
+.username {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* General Container for the Form */
+.container-user-form {
+    width: 66.67%; /* Form takes two-thirds of the page */
+    margin: 0 auto; /* Center align the form horizontally */
+    padding: 0;
+}
+
+/* Form Container */
+.form-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 0; /* No margin below the form */
+}
+
+/* Form Row */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+/* Form Group for full-width fields */
+.form-group {
+    flex: 1;
+    margin-right: 15px;
+}
+
+/* Form Group Full Width */
+.form-group-full {
+    margin: 0;
+    width: 100%;
+}
+
+/* Input fields */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Submit buttons */
+.form-submit {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .container-user-form {
+        width: 100%; /* Full width on small screens */
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-group {
+        margin-right: 0;
+    }
+}
+
+/* Table Styling */
+.table-container {
+    width: 100%; /* Full width for the table */
+    margin-top: 20px;
+    border-collapse: collapse; /* Remove space between table cells */
+}
+
+.table-container table {
+    width: 100%; /* Full width table */
+    border: 1px solid #ddd; /* Light border around table */
+}
+
+.table-container th, .table-container td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Table header styling */
+.table-container th {
+    background-color: #007BFF; /* Blue background */
+    color: white; /* White text */
+}
+
+/* Table row hover effect */
+.table-container tr:hover {
+    background-color: #f1f1f1; /* Light grey on hover */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .table-container {
+        width: 100%; /* Ensure full width on small screens */
+    }
+}

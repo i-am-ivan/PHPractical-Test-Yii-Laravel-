@@ -1,7 +1,6 @@
 <?php
-// index.php
 session_start();
-if (isset($_SESSION['user_id'])) {
+if (isset($_SESSION['id'])) {
     header('Location: Frontend/dashboard.php');
     exit();
 }
@@ -12,14 +11,14 @@ if (isset($_SESSION['user_id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Loan App</title>
+    <title>Loan Management WebApp</title>
 
     <!-- Google Fonts and Material Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="Assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="Assets/css/style.css">
 
 </head>
 <body>
@@ -35,8 +34,8 @@ if (isset($_SESSION['user_id'])) {
             <label for="password">Password</label>
             <input type="password" name="password" id="password" required>
         </div>
-        <?php if (isset($error_message)): ?>
-            <div class="error-message"><?= $error_message ?></div>
+        <?php if (isset($_SESSION['error_message'])): ?>
+            <div class="error-message"><?= $_SESSION['error_message']; unset($_SESSION['error_message']); ?></div>
         <?php endif; ?>
         <button type="submit">Log In</button>
     </form>
