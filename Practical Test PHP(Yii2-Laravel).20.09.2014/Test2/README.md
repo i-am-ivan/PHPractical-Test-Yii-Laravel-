@@ -2,19 +2,11 @@
 
 **Description:** Building a simple Loan management system that includes:
 
-**Version:**: PHP 7.4 +
-
 **Framework(s):** Laravel, But anyone can use this logic to hardcode it.
 
-- User Management.
-  
-- Loan Products Management.
+**Prerequisites:**  Composer, PHP 7.4+, MySQL, Laravel, Git, and Apache2 all running.
 
-- Customer Management.
-  
-- Loam Management.
- 
-- Reports
+**NOTE:** This was done on Ubuntu 24.04 but can run on other platforms
 
 ## Logic
 
@@ -24,7 +16,6 @@ Both Admin and clerk can CRUD customers, review loan products, assign loan, prin
 
 Only the admin can add loan products to the system and CRUD users.
 
-NOTE: .
 
 ## Expected Output
 
